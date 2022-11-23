@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex 布局</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      height: 800px;
+      background-color: rgb(164, 196, 196);
+    }
+    /* * { */
+    /* border: 1px solid rgb(0, 0, 0); */
+    /* } */
+    .yinYing {
+      box-shadow: 5px 5px 3px 0 rgba(123, 127, 127, 0.4);
+    }
+    .flex {
+      display: flex;
+    }
+
+    .baiSe {
+      background-color: #eee;
+    }
+    .flex1 {
+      flex: 1;
+    }
+    .column {
+      flex-direction: column;
+    }
+    .mg8 {
+      margin: 8px;
+    }
+    .mgr8 {
+      margin-right: 8px;
+    }
+    .mgt8 {
+      margin-top: 8px;
+    }
+    .daohang {
+      padding: 10px 20px;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      color: #000;
+    }
+    @media (max-width: 600px) {
+      .ceBian {
+        display: none;
+      }
+      .neiRong {
+        flex-direction: column;
+      }
+      .shuJuQu {
+        flex-direction: column;
+      }
+      .youQU {
+        margin-left: 8px;
+      }
+      .shuJu {
+        margin: 0 0 8px;
+        flex: auto;
+      }
+    }
+    .neiRong::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <body class="flex">
+    <div style="width: 200px; z-index: 2" class="baiSe yinYing">
+      <div style="display: flex; flex-direction: column">
+        <div style="margin: 40px; margin-left: 55px">
+          <img src="pic.webp" width="80px" height="79px" alt="skylar" />
+        </div>
+
+        <div
+          style="color: rgb(165, 191, 193); font-size: 30px; margin-left: 58px"
+        >
+          skylar
+        </div>
+      </div>
+    </div>
+    <div class="flex1 flex column">
+      <div style="height: 80px; z-index: 1" class="baiSe yinYing"></div>
+      <div style="overflow: auto" class="neiRong flex1 flex">
+        <div style="flex: 3" class="flex column mg8">
+          <div class="flex shuJuQu">
+            <div
+              style="height: 100px"
+              class="shuJu flex1 baiSe mgr8 yinYing"
+            ></div>
+            <div
+              style="height: 100px"
+              class="shuJu flex1 baiSe mgr8 yinYing"
+            ></div>
+            <div
+              style="height: 100px"
+              class="shuJu flex1 baiSe mgr8 yinYing"
+            ></div>
+            <div style="height: 100px" class="shuJu flex1 baiSe yinYing"></div>
+          </div>
+          <div class="flex column">
+            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+
+            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+          </div>
+        </div>
+        <div style="flex: 1" class="youQu flex column mgr8 mgt8">
+          <div style="height: 150px" class="baiSe yinYing"></div>
+          <div style="height: 300px" class="baiSe mgt8 yinYing"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
